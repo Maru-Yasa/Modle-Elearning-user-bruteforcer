@@ -83,7 +83,7 @@ class Brute:
 				login_cek = login.read()
 				sys.stdout.write(RESET)
 
-				if self.eror_ind.encode() in login_cek:
+				if self.eror_ind.encode() or self.eror_en.encode() in login_cek:
 					sys.stdout.write(Back.RED)
 					sys.stdout.write('[#] {} gagal dengan password {} \n'.format(i,self.password))
 				else:
